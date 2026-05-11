@@ -8,8 +8,12 @@ config()
  const app=exp()
 app.use(exp.json())
 app.use(cors({
-  origin:["http://localhost:5173","https://mini-frontend-gamma.vercel.app/"],
-}))
+  origin: [
+    "http://localhost:5173",
+    "https://mini-frontend-gamma.vercel.app"
+  ],
+  credentials: true
+}));
 app.use('/employee',empapp)
 
 
